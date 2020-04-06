@@ -19,16 +19,22 @@ jobs:
         set -x
 
         echo "---> plugin-add"
-        asdf plugin-add kwt ./
         asdf plugin-add ytt ./
+        asdf plugin-add kbld ./
         asdf plugin-add kapp ./
+        asdf plugin-add kwt ./
         asdf plugin-add vendir ./
+        asdf plugin-add imgpkg ./
+        asdf plugin-add json2k8s ./
 
         echo "---> list-all"
-        asdf list-all kwt
         asdf list-all ytt
+        asdf list-all kbld
         asdf list-all kapp
+        asdf list-all kwt
         asdf list-all vendir
+        asdf list-all imgpkg
+        asdf list-all json2k8s
 
         # TODO does not work for some reason:
         # echo "---> plugin-test"
