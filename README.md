@@ -5,7 +5,7 @@ k14s plugin for [asdf](https://github.com/asdf-vm/asdf) version manager
 ## Install
 
 ```
-asdf plugin-add <kwt|ytt|kapp|vendir|kbld|json2k8s> https://github.com/k14s/asdf-k14s.git
+asdf plugin-add <ytt|kbld|kapp|kwt|vendir|imgpkg|json2k8s> https://github.com/k14s/asdf-k14s.git
 ```
 
 ## Use
