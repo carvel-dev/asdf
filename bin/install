@@ -28,7 +28,7 @@ install () {
   local -r download_path="${TMP_DOWNLOAD_DIR}/$(get_filename)"
 
   echo "Downloading ${toolname} version ${version} from ${download_url}"
-  if curl -fs "${download_url}" -o "${download_path}"; then
+  if curl -fsL "${download_url}" -o "${download_path}"; then
     echo "Cleaning ${toolname} previous binaries"
     rm -rf "${bin_install_path}/${toolname}"
 
@@ -36,7 +36,10 @@ install () {
     mkdir -p "${bin_install_path}"
 
     echo "Installing ${toolname} into bin directory" 
-    mv "${download_path}" "${bin_install_path}"
+    mv "${download_path}" "${bin_install_path}/${toolname}"
+    
+    echo "Making ${toolname} executable"
+    chmod +x "${bin_install_path}/${toolname}"
   else
     echo "Error: ${toolname} version ${version} not found" >&2
     exit 1
