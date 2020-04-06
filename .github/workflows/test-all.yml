@@ -1,0 +1,38 @@
+name: test-all
+on: [push, pull_request]
+jobs:
+  test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Install asdf
+      run: git clone https://github.com/asdf-vm/asdf.git $HOME/asdf
+    - name: Test plugin
+      run: |
+        set -e -u
+        . $HOME/asdf/asdf.sh
+
+        set -x
+
+        echo "---> plugin-add"
+        asdf plugin-add kwt ./
+        asdf plugin-add ytt ./
+        asdf plugin-add kapp ./
+        asdf plugin-add vendir ./
+
+        echo "---> list-all"
+        asdf list-all kwt
+        asdf list-all ytt
+        asdf list-all kapp
+        asdf list-all vendir
+
+        # TODO does not work for some reason:
+        # echo "---> plugin-test"
+        # asdf plugin-test kwt ./ 'kwt version'
+        # asdf plugin-test ytt ./ 'ytt version'
+        # asdf plugin-test kapp ./ 'kapp version'
+        # asdf plugin-test vendir ./ 'vendir version'
