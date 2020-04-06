@@ -10,8 +10,6 @@ readonly toolname="$(basename "$(dirname "${__dirname}")")"
 
 list_all () {
   local versions=""
-  local version
-  local v
 
   releases_path=https://api.github.com/repos/k14s/${toolname}/releases
   cmd="curl -s"
