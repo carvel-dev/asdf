@@ -1,4 +1,4 @@
-# asdf-k14s [![Build Status](https://travis-ci.org/k14s/asdf-k14s.svg?branch=master)](https://travis-ci.org/k14s/asdf-k14s)
+# asdf-k14s [![test-all](https://github.com/k14s/asdf-k14s/workflows/test-all/badge.svg)](https://github.com/k14s/asdf-k14s/actions)
 
 k14s plugin for [asdf](https://github.com/asdf-vm/asdf) version manager
 
