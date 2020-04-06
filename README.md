@@ -14,4 +14,4 @@ Check out the [asdf](https://github.com/asdf-vm/asdf) readme for instructions on
 
 ## Thanks!
 
-Special thanks to @johnhamelink for starting this up.
+Special thanks to [@johnhamelink](https://github.com/johnhamelink) for starting this up.
