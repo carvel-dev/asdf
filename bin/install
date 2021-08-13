@@ -58,7 +58,7 @@ get_filename () {
 get_download_url() {
   local -r version="$1"
   local -r filename="$(get_filename)"
-  echo "https://github.com/k14s/${toolname}/releases/download/v${version}/${filename}"
+  echo "https://github.com/vmware-tanzu/carvel-${toolname}/releases/download/v${version}/${filename}"
 }
 
 install "${ASDF_INSTALL_TYPE}" "${ASDF_INSTALL_VERSION}" "${ASDF_INSTALL_PATH}"
