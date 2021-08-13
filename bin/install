@@ -46,13 +46,31 @@ install () {
   fi
 }
 
-get_arch () {
+get_os () {
   uname | tr '[:upper:]' '[:lower:]'
 }
 
+get_arch () {
+  local -r arch="$(uname -m)"
+  case "${arch}" in
+    x86_64)
+      echo amd64
+      ;;
+    arm64|aarch64)
+      echo arm64
+      ;;
+    *)
+      # fallback: use machine's literal arch for download URL
+      # this helps this code be future-proof (ex: s390x)
+      echo "$arch"
+      ;;
+  esac
+}
+
 get_filename () {
-  local -r platform="$(get_arch)"
-  echo "${toolname}-${platform}-amd64"
+  local -r os="$(get_os)"
+  local -r arch="$(get_arch)"
+  echo "${toolname}-${os}-${arch}"
 }
 
 get_download_url() {
