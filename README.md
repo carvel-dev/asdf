@@ -5,7 +5,7 @@ carvel plugin for [asdf](https://github.com/asdf-vm/asdf) version manager
 ## Install
 
 ```
-asdf plugin-add <ytt|kbld|kapp|kwt|vendir|imgpkg|json2k8s> https://github.com/vmware-tanzu/asdf-carvel.git
+asdf plugin-add <ytt|kbld|kapp|kwt|vendir|imgpkg> https://github.com/vmware-tanzu/asdf-carvel.git
 ```
 
 ## Use
