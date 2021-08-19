@@ -1,16 +1,16 @@
-# asdf-k14s [![test-all](https://github.com/k14s/asdf-k14s/workflows/test-all/badge.svg)](https://github.com/k14s/asdf-k14s/actions)
+# asdf-carvel [![test-all](https://github.com/vmware-tanzu/asdf-carvel/workflows/test-all/badge.svg)](https://github.com/vmware-tanzu/asdf-carvel/actions)
 
-k14s plugin for [asdf](https://github.com/asdf-vm/asdf) version manager
+carvel plugin for [asdf](https://github.com/asdf-vm/asdf) version manager
 
 ## Install
 
 ```
-asdf plugin-add <ytt|kbld|kapp|kwt|vendir|imgpkg|json2k8s> https://github.com/k14s/asdf-k14s.git
+asdf plugin-add <ytt|kbld|kapp|kwt|vendir|imgpkg> https://github.com/vmware-tanzu/asdf-carvel.git
 ```
 
 ## Use
 
-Check out the [asdf](https://github.com/asdf-vm/asdf) readme for instructions on how to install and manage versions of tools from k14s.
+Check out the [asdf](https://github.com/asdf-vm/asdf) readme for instructions on how to install and manage versions of tools from carvel.
 
 ## Thanks!
 
